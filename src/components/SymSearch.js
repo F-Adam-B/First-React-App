@@ -19,10 +19,11 @@ export default class SymSearch extends React.Component {
 
     return (
       <div className="SymSearch">
-        {' '}
-        Type a Symbol
-        <SymInput onChange={searchSym => this.setState({searchSym})}/>
-        <SymData symdata={search}/>
+        <p>Type a Symbol</p>
+        <div>
+          <SymInput onChange={searchSym => this.setState({searchSym})}/>
+          <SymData symdata={search}/>
+        </div>
       </div>
     );
   }

@@ -4,10 +4,13 @@ export default function SymData(props) {
   console.log(props)
   const stockData = props.symdata.map((data, index) => (
     <li key={index}>
-      <strong>Symbol: {data.symbol} </strong>
-      <strong>LastPrice: {data.price} </strong>
-      <strong>DayHigh: {data.high} </strong>
-      <strong>DayLow: {data.low} </strong>
+      <strong>Symbol: {data.symbol} | </strong>
+        <span> LastPrice: {data.price} | </span>
+        <span> Open: {data.open} | </span>
+        <span> DayHigh: {data.high} | </span>
+        <span> DayLow: {data.low} | </span>
+        <span> Volume: {data.volume} | </span>
+        <span> Market Cap: {data.mktCap}</span>
     </li>
   ));
   

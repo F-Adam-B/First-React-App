@@ -1,3 +1,10 @@
 [
-  {"symbol": "SPY", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"}
+  {"symbol": "SPY", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"},
+  {"symbol": "AMZN", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"},
+  {"symbol": "AAPL", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"},
+  {"symbol": "FB", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"},
+  {"symbol": "GOOG", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"},
+  {"symbol": "MSFT", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"},
+  {"symbol": "TSLA", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"},
+  {"symbol": "IBM", "price": "$258.19", "high":"$258.58", "low":"$258.15", "open": "$258.15", "volume": "2.555m", "mktCap": "253.95B", "eps": -1.46, "shares": "982.13M"}
 ]
