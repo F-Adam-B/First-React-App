@@ -1,0 +1,29 @@
+.lastprice {
+  background-color: orange;
+  font-weight: bold;
+}
+
+.open {
+  background-color: orange;
+  font-weight: bold;
+}
+
+.dayhigh {
+  background-color: lime;
+  font-weight: bold;
+}
+
+.daylow {
+  background-color: red;
+  font-weight: bold;
+}
+
+.volume {
+  background-color: orange;
+  font-weight: bold;
+}
+
+.marketcap {
+  background-color: cyan;
+  font-weight: bold;
+}

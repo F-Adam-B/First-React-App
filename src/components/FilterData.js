@@ -1,14 +1,16 @@
 import React from 'react';
 
+import './FilterData.css';
+
 export default function FilterData(props) {
   const stockData = props.symdata.map((data, index) => (
     <li key={index}>
-        <span> LastPrice: {data.price} | </span>
-        <span> Open: {data.open} | </span>
-        <span> DayHigh: {data.high} | </span>
-        <span> DayLow: {data.low} | </span>
-        <span> Volume: {data.volume} | </span>
-        <span> Market Cap: {data.mktCap}</span>
+        <span className="lastprice"> LastPrice: {data.price} | </span>
+        <span className="open"> Open: {data.open} | </span>
+        <span className="dayhigh"> DayHigh: {data.high} | </span>
+        <span className="daylow"> DayLow: {data.low} | </span>
+        <span className="volume"> Volume: {data.volume} | </span>
+        <span className="marketcap"> Market Cap: {data.mktCap}</span>
     </li>
   ));
   

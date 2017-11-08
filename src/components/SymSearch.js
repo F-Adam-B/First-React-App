@@ -57,7 +57,7 @@ export default class SymSearch extends React.Component {
     return (
       <div className="SymSearch">
         <Clock date={this.state.date} />
-        <p>Type a Symbol</p>
+        <p>Snapshot Quote</p>
         <div>
           <SymInput onChange={searchSym => this.removeData(searchSym)} />
           <SymData symdata={search} />
