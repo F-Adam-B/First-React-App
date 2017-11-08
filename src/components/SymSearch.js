@@ -2,33 +2,50 @@ import React from 'react';
 
 import SymInput from './SymInput';
 import SymData from './SymData';
-import Filter from './Filter';
-import FilterInput from './FilterInput';
+import SubmitButton from './SubmitButton';
 import FilterData from './FilterData';
 import Clock from './Clock';
 
 export default class SymSearch extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       searchSym: '',
-      filterTerm: '',
+      submit: false,
       date: new Date()
     };
+    this.showData = this.showData.bind(this);
+    this.removeData = this.removeData.bind(this);
   }
 
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
   }
 
-  // componentWillUnmount(){
-  //   clearInterval(this.timerID);
-  // }
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
 
   tick() {
     this.setState({
       date: new Date()
+    });
+  }
+
+  showData() {
+    this.setState({
+      submit: true
+    });
+  }
+
+  removeData(searchSym) {
+    if (searchSym === '' || searchSym == null) {
+      this.setState({
+        submit: false
+      });
+    }
+    this.setState({
+      searchSym
     });
   }
 
@@ -37,21 +54,15 @@ export default class SymSearch extends React.Component {
       data.symbol.toLowerCase().includes(this.state.searchSym.toLowerCase())
     );
 
-    // const filter = this.props.symdata.filter(data =>
-    //   data.mktCap.toLowerCase().includes(this.state.filterTerm.toLowerCase())
-    // );
-
     return (
       <div className="SymSearch">
         <Clock date={this.state.date} />
         <p>Type a Symbol</p>
         <div>
-          <SymInput onChange={searchSym => this.setState({ searchSym })} />
+          <SymInput onChange={searchSym => this.removeData(searchSym)} />
           <SymData symdata={search} />
-        
-          {/* <FilterInput onChange={filterTerm => this.setState({ filterTerm })} />
-          <Filter symdata={filter}/> */}
-          {/* <FilterData symdata={filter}/> */}
+          <SubmitButton onClick={this.showData} />
+          {this.state.submit && <FilterData symdata={search} />}
         </div>
       </div>
     );
