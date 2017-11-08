@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import SymSearch from './components/SymSearch';
+import data from './data.json';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<SymSearch symdata={data}/>, document.getElementById('root'));
 registerServiceWorker();
